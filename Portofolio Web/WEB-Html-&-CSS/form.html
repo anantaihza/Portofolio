@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CCI WebDev</title>
+	<!-- <link rel="stylesheet" href="style.css"> -->
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+			background: url(latar.jpg);
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+		}
+		.register-form h1 {
+			color: white;
+			text-align: center;
+			text-transform: uppercase;
+		}
+		.border {
+			width: 33%;
+			height: 6px;
+			background-color: #D980FA;
+			margin: 20px auto;
+		}
+		.register-form {
+			width: 85%;
+			margin-top: 15%;
+			margin-bottom: 8%; 
+			max-width: 600px;
+			background-color: black;
+			box-shadow: -6px 7px 15px black;
+			opacity: 0.87;
+			position: absolute;
+			top: 50%;
+			left:50%;
+			transform: translate(-50%,-50%);
+			padding: 30px 40px;
+			box-sizing: border-box;
+			border-radius: 10px;
+			text-align: center;
+			font-family: "montserrat",sans-serif;
+		}
+		.identity  {
+			color: white;
+			border: 0px solid white;
+			border-radius: 8px;
+			padding: 8px 18px;
+		}
+		.identity label {
+			display: block;
+			padding: 7px;
+			width: 30%;
+			text-transform: uppercase;
+			font-size: 13px;
+		}
+		.identity input {
+			color: white;
+			width: 35%;
+			border: 0.6px solid white;
+			border-radius: 10px;
+			background: none;
+			margin-top: 8px;
+			padding: 6px;
+			text-align: center;
+			outline: none;
+		}
+		.identity input:hover {
+			box-shadow: 0 0 9px 4px #D980FA;
+			cursor: pointer;
+		}
+		.gender {
+			color: white;
+			font-size: 13px;
+			padding: 7px;
+		}
+		.registrasi:hover {
+			box-shadow: 0 0 10px 4px #D980FA;
+		}
+		.registrasi {
+			color: white;
+			border: 1px solid white;
+			margin: 8px;
+			padding: 12px 18px;
+			border-radius: 8px;
+		}
+		.registrasi label {
+			display: block;
+			text-align: left;	
+			text-transform: uppercase;
+			font-size: 12px;
+			box-shadow: none;
+		}
+		.registrasi input {
+			color: white;
+			width: 100%;
+			border: none;
+			background: none;
+			font-size: 14px;
+			margin-top: 7px;
+			outline: none; 
+			cursor: pointer;
+		}
+		.registrasi textarea {
+			color:white;
+			width:100%;
+			border:none;
+			background: none;
+			font-size: 14px;
+			margin-top: 7px;
+			cursor: pointer;
+			outline: none;
+		}
+		.registrasi input:hover {
+			box-shadow: none;	
+		}
+		.registrasi textarea:hover {
+			box-shadow: none;
+		}
+		.registrasi label:hover {
+			box-shadow: none;	
+		}
+		.angkatan {
+			margin-left: 17px;
+			display: block;
+			text-transform: uppercase;
+			font-size: 13px;
+			text-align: left;
+		}
+		.angkatan label {
+			color: white;
+		}
+		.angkatan select {
+			background: none;
+			border: none;
+			color: white;
+			cursor: pointer;
+		}
+		.angkatan select:hover{
+			box-shadow: 0 0 10px 4px #D980FA;
+			border-radius: 6px; 
+		}
+		.angkatan option {
+			color: black;
+			background: #4bcffa;
+			border: none;
+
+		}
+		.tombol {
+			top: 50%;
+			left: 50%;
+			padding: 20px;
+
+		}
+		.tombol button {
+			position: relative;
+			margin: 20px 0;
+			display: block;
+			background: none;
+			color: white;
+			text-transform: uppercase;
+			padding: 12px 50px;
+			font-size: 14px;
+			border: 2px solid #D980FA;
+			border-radius: 8px;
+			overflow: hidden;
+			cursor: pointer;
+			transition: 1s all ease;
+			outline: none;
+		}
+		.tombol button::before {
+			background: #30336b;
+			border-radius: 10px;
+			content: " ";
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			position: absolute;
+			transition: all 2s ease;
+			z-index: -1;
+			width: 0;
+			height: 100%;
+		}
+		.tombol button:focus::before {
+			width: 300%;
+
+		}
+		.tombol button:hover {
+			box-shadow: 0 0 10px 4px #D980FA;
+		}
+	</style>
+</head>
+<body>
+	<div class="register-form">
+		<h1>WebDev Recruitment</h1>
+		<div class="border"></div>
+
+		<div class="identity">
+			<label> Nama lengkap :</label>
+			<input type="text" name=""  value="" placeholder="Nama Depan">
+			<input type="text" name=""  value="" placeholder="Nama Belakang">
+		</div>
+
+		<div class="gender">
+			<input type="radio" id="Laki-laki" name="jenis-kelamin">
+			<label for="Laki-laki">Laki-laki</label>
+			<input type="radio" id="Perempuan" name="jenis-kelamin">
+			<label for="Perempuan">Perempuan</label>
+		</div>
+
+		<div class="angkatan">
+			<label for="angkatan"> angkatan </label>
+			<select id="angkatan">
+				<option>2017</option>
+				<option>2018</option>
+				<option>2019</option>
+			</select>	
+		</div>
+
+		
+		<div class="registrasi">
+			<label for="nim"> NIM : </label>
+			<input type="text" name=""  id="nim" placeholder="Nomor Induk Mahasiswa">	
+		</div>
+
+		<div class="registrasi">
+			<label for="born"> Tempat / Tanggal lahir : </label>
+			<input type="text" name=""  id="born" placeholder="Tanggal lahir">	
+		</div>
+		
+		<div class="registrasi">
+			<label for="address"> Alamat : </label>
+			<input type="text" name=""  id="address" placeholder="Tempat Tinggal">	
+		</div>
+
+		<div class="registrasi">
+			<label for="email"> Email : </label>
+			<input type="Email" name=""  id="email" placeholder="ex : namaAnda@gmail.com">	
+		</div>
+
+		<div class="registrasi">
+			<label for="hp"> No HP : </label>
+			<input type="text" name=""  id="hp" placeholder="ex : 081xxxxxxxxx">
+		</div>
+
+		<div class="registrasi">
+			<label for="reason">Ingin Mengikuti WebDev :</label>
+			<textarea id="reason" placeholder="Alasan Anda"></textarea>
+		</div>
+		
+
+		<div class="tombol">
+			<button type="submit"> kirim </button>
+		</div>
+
+	</div>
+</body>
+</html>
